@@ -17,7 +17,7 @@ public class DeleteCommands {
 
     public boolean chooseCommand() {
         System.out.print("\t1 - delete number\n"
-                + "\t2 - delete subcopmpany\n"
+                + "\t2 - delete subcompany\n"
                 + "\t3 - delete tariff\n"
                 + "\t4 - delete user\n"
                 + "\t5 - return\n\t");

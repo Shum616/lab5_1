@@ -1,28 +1,26 @@
 package Resources;
 
+import java.io.Serializable;
 import java.util.Comparator;
 import java.util.Scanner;
 
-public class SubCompany extends MotherBase {
+public class SubCompany extends MotherBase implements Serializable {
     private String country;
     private int iD;
 
     public String getCountry() { return country; }
     public int getiD() { return iD; }
 
-    public void setCountry(String country) { this.country = country; }
-    public void setiD(int iD) { this.iD = iD; }
-
     public void createSubcompany(){
         Scanner in = new Scanner(System.in);
-        System.out.printf("\nEnter the country: ");
+        System.out.println("\t\t\tEnter the country: ");
         this.country = in.nextLine();
-        System.out.printf("\nEnter id: ");
+        System.out.println("\t\t\tEnter id: ");
         this.iD = in.nextInt();
     }
     public void showSubcompany(){
-        System.out.printf("\tCountry: %s\n" +
-                        "\tID: %d\n",
+        System.out.printf("Country: %s\n" +
+                        "\t\t\tID: %d\n",
                 this.country, this.iD);
     }
 

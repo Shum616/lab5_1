@@ -17,7 +17,7 @@ public class EditCommands {
 
     public boolean chooseCommand() {
         System.out.print("\t1 - edit number\n"
-                + "\t2 - edit subcpmpany\n"
+                + "\t2 - edit subcompany\n"
                 + "\t3 - edit tariff\n"
                 + "\t4 - edit user\n"
                 + "\t5 - return\n\t");

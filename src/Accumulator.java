@@ -19,7 +19,7 @@ public class Accumulator {
         special = new SpeialCommands(base);
     }
 
-    public boolean chooseCommand() {
+    public boolean chooseCommandType() {
         System.out.print("1 - add elements\n"
                 + "2 - delete elements\n"
                 + "3 - edit elements\n"

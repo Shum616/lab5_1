@@ -17,7 +17,7 @@ public class ShowSortedcommands {
 
     public boolean chooseCommand() {
         System.out.print("\t1 - show sorted numbers\n"
-                + "\t2 - show sorted subcopmpanies\n"
+                + "\t2 - show sorted subcompanies\n"
                 + "\t3 - show sorted tariffs\n"
                 + "\t4 - show sorted users\n"
                 + "\t5 - return\n\t");

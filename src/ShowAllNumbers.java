@@ -8,7 +8,6 @@ public class ShowAllNumbers implements  Command {
     }
 
     public void execute() {
-        System.out.printf("\n\tAll numbers:");
         base.showAllNumbers();
     }
 }

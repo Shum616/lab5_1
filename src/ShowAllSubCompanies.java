@@ -7,7 +7,6 @@ public class ShowAllSubCompanies implements  Command {
         this.base = base;
     }
     public void execute() {
-        System.out.printf("\n\tAll subcompanies:");
         base.showAllSubcompanies();
     }
 }

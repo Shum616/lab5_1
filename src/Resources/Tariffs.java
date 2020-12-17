@@ -1,10 +1,11 @@
 package Resources;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Scanner;
 
-public class Tariffs {
+public class Tariffs implements Serializable {
     private int payment;
     private int gbPerMonth;
     private int minsForCountryOfResidence;
@@ -15,62 +16,48 @@ public class Tariffs {
 
     public int getPayment() { return payment; }
     public int getGbPerMonth() { return gbPerMonth; }
-    public int getMinsForCountryOfResidence() { return minsForCountryOfResidence; }
-    public int getMinsForTheOtherCountries() { return minsForTheOtherCountries; }
     public int getWebsFee() { return websFee; }
     public int getId() { return Id; }
     public ArrayList<String> getStocks() { return stocks; }
 
-    public void createTariffs(int payment, int gbPerMonth, int minsForCountryOfResidence,
-                              int minsForTheOtherCountries, int websFee, int id, String ... stock){
-        this.payment = payment;
-        this.gbPerMonth = gbPerMonth;
-        this.minsForCountryOfResidence = minsForCountryOfResidence;
-        this.minsForTheOtherCountries = minsForTheOtherCountries;
-        this.websFee = websFee;
-        this.Id = id;
-        for (int i = 0; i < stock.length; i++) {
-            this.stocks.add(stock[i]);
-        }
-    }
-
     public void createTariffs(){
         Scanner in = new Scanner(System.in);
-        System.out.printf("\nEnter payment: ");
-        this.payment = in.nextInt();
-        System.out.printf("\nEnter GB per month: ");
-        this.gbPerMonth = in.nextInt();
-        System.out.printf("\nEnter minutes for country of residence: ");
-        this.minsForCountryOfResidence = in.nextInt();
-        System.out.printf("\nEnter minutes for other countries: ");
-        this.minsForTheOtherCountries = in.nextInt();
-        System.out.printf("\nEnter web fee: ");
-        this.websFee = in.nextInt();
-        System.out.printf("\nEnter the id: ");
+        System.out.println("\t\t\tEnter the id: ");
         this.Id= in.nextInt();
-        System.out.printf("\nEnter amount of stocks: ");
+        System.out.println("\t\t\tEnter payment: ");
+        this.payment = in.nextInt();
+        System.out.println("\t\t\tEnter GB per month: ");
+        this.gbPerMonth = in.nextInt();
+        System.out.println("\t\t\tEnter minutes for country of residence: ");
+        this.minsForCountryOfResidence = in.nextInt();
+        System.out.println("\t\t\tEnter minutes for other countries: ");
+        this.minsForTheOtherCountries = in.nextInt();
+        System.out.println("\t\t\tEnter web fee: ");
+        this.websFee = in.nextInt();
+        System.out.println("\t\t\tEnter amount of stocks: ");
         int num = in.nextInt();
-
+        in.nextLine();
         String stock;
         for (int i = 0; i < num; i++) {
-            System.out.printf("\n\tEnter stock of %d. element: ", i+1);
+            System.out.printf("\n\t\t\tEnter stock of %d. element: ", i+1);
             stock = in.nextLine();
             this.stocks.add(stock);
         }
     }
 
     public void showTariff(){
-        System.out.printf("\tPayment: %d\n" +
-                "\tGB per month: %d\n" +
-                "\tMinutes for country of residence: %d\n" +
-                "\tMinutes for the other countries: %d\n" +
-                "\tWebs fee: %d\n" +
-                 "\tId: %d\n" +
-                "\tWebs fee: %d", this.payment, this.gbPerMonth, this.minsForCountryOfResidence,
+        System.out.printf("Payment: %d\n" +
+                "\t\t\tGB per month: %d\n" +
+                "\t\t\tMinutes for country of residence: %d\n" +
+                "\t\t\tMinutes for the other countries: %d\n" +
+                "\t\t\tWebs fee: %d\n" +
+                 "\t\t\tId: %d\n", this.payment, this.gbPerMonth, this.minsForCountryOfResidence,
                 this.minsForTheOtherCountries, this.websFee, this.Id);
-        System.out.printf("\n\tStocks of Tariff: ");
+        System.out.println("\t\t\tStocks of Tariff: ");
+        int i =0;
         for(String s : this.getStocks()) {
-            System.out.printf(" %s", s);
+            System.out.printf("\t\t\t\t%d) %s\n", i+1, s);
+            i++;
         }
     }
     public static final Comparator<Tariffs> CompareByPayment = new Comparator<Tariffs>() {

@@ -9,7 +9,7 @@ public class AddUser implements Command {
     }
     public void execute() {
         User user = new User();
-        user.createUser();
+        user.createUser(base);
         base.AddUser(user);
     }
 }

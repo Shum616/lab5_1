@@ -10,7 +10,6 @@ public class ShowAllTariffs implements  Command{
         this.base = base;
     }
     public void execute() {
-        System.out.printf("\n\tAll available tariffs:");
         base.showAllTariff();
     }
 }

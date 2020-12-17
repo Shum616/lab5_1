@@ -6,9 +6,7 @@ public class ShowAllUsers implements  Command {
     public ShowAllUsers(MotherBase base) {
         this.base = base;
     }
-
     public void execute() {
-        System.out.printf("\n\tAll users:");
         base.showAllUser();
     }
 }

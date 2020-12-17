@@ -17,7 +17,7 @@ public class ShowAllCommands {
 
     public boolean chooseCommand() {
         System.out.print("\t1 - show all numbers\n"
-                + "\t2 - show all subcopmpanies\n"
+                + "\t2 - show all subcompanies\n"
                 + "\t3 - show all tariffs\n"
                 + "\t4 - show all users\n"
                 + "\t5 - return\n\t");
